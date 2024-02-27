@@ -291,3 +291,47 @@
   new PureCounter();
 
 })()
+
+/**Contacto */
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const formData = new FormData(this);
+
+  const loadingMessage = document.querySelector('.loading');
+  const errorMessage = document.querySelector('.error-message');
+  const sentMessage = document.querySelector('.sent-message');
+
+  loadingMessage.style.display = 'block';
+  errorMessage.style.display = 'none';
+  sentMessage.style.display = 'none';
+
+  fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      service_id: 'tu_service_id',
+      template_id: 'tu_template_id',
+      user_id: 'tu_user_id',
+      template_params: {
+        'from_name': formData.get('name'),
+        'from_email': formData.get('email'),
+        'message': formData.get('message'),
+        'to_email': 'yahairaperez2694@gmail.com'
+      }
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    loadingMessage.style.display = 'none';
+    sentMessage.style.display = 'block';
+    console.log(data);
+  })
+  .catch(error => {
+    loadingMessage.style.display = 'none';
+    errorMessage.style.display = 'block';
+    console.error(error);
+  });
+});

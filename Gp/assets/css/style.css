@@ -174,10 +174,30 @@ h6 {
   color: #343a40;
 }
 
+.iconwasath{
+    position: fixed;
+    bottom: 20px; /* ajusta la distancia desde la parte inferior */
+    right: 20px; /* ajusta la distancia desde la derecha */
+    z-index: 9999; /* asegura que esté sobre otros elementos */
+    width: 68px; /* ajusta el ancho del contenedor */
+    height: 68px; /* ajusta la altura del contenedor */
+  }
+
+.iconwasath img {
+  width: 100%; /* asegura que la imagen llene el contenedor */
+  height: auto; /* mantiene la proporción original de la imagen */
+}
+
+
 @media (max-width: 992px) {
   .get-started-btn {
     padding: 7px 20px 8px 20px;
     margin-right: 15px;
+  }
+  .iconwasath{
+    padding: 7px 20px 8px 20px;
+    margin-right: 15px;
+  
   }
 }
 
@@ -507,7 +527,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 75px 0;
   overflow: hidden;
 }
 
@@ -616,7 +636,7 @@ section {
 # Features
 --------------------------------------------------------------*/
 .features {
-  padding-top: 20px;
+  padding: 90px 0;
 }
 
 .features .icon-box {
@@ -1264,14 +1284,14 @@ section {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .error-message {
+/* .contact .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
   font-weight: 600;
-}
+} */
 
 .contact .php-email-form .error-message br+br {
   margin-top: 25px;
