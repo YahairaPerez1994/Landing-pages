@@ -32,7 +32,9 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-
+.container_about {
+  padding:40px;
+ }
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -174,14 +176,15 @@ h6 {
   color: #343a40;
 }
 
-.iconwasath{
-    position: fixed;
-    bottom: 20px; /* ajusta la distancia desde la parte inferior */
-    right: 20px; /* ajusta la distancia desde la derecha */
-    z-index: 9999; /* asegura que esté sobre otros elementos */
-    width: 68px; /* ajusta el ancho del contenedor */
-    height: 68px; /* ajusta la altura del contenedor */
-  }
+.iconwasath {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 9999; 
+  width: 68px; 
+  height: 68px; 
+}
+
 
 .iconwasath img {
   width: 100%; /* asegura que la imagen llene el contenedor */
@@ -527,7 +530,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 75px 0;
+  padding: 34px 0;
   overflow: hidden;
 }
 
@@ -1278,6 +1281,7 @@ section {
 .contact .php-email-form {
   width: 100%;
   background: #fff;
+  padding:30px;
 }
 
 .contact .php-email-form .form-group {
@@ -1434,7 +1438,7 @@ section {
 #footer .footer-top {
   background: #151515;
   border-bottom: 1px solid #222222;
-  padding: 60px 0 30px 0;
+  padding: 35px 0 20px 0;
 }
 
 #footer .footer-top .footer-info {
@@ -1564,7 +1568,7 @@ section {
 
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 25px;
 }
 
 #footer .credits {

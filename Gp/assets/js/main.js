@@ -259,10 +259,10 @@
    * Testimonials slider
    */
   new Swiper('.testimonials-slider', {
-    speed: 600,
+    speed: 10000,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 8000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
@@ -334,4 +334,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     errorMessage.style.display = 'block';
     console.error(error);
   });
+});
+// icon wasath
+// Espera a que el documento esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+  // Verifica si el usuario ya interactuó con el icono de WhatsApp
+  if (!localStorage.getItem("whatsappIconClicked")) {
+    // Si el usuario no ha interactuado con el icono de WhatsApp, muestra el icono
+    document.getElementById("whatsapp-icon").classList.add("show");
+  }
+});
+
+// Agrega un event listener para el clic en el icono de WhatsApp
+document.getElementById("whatsapp-icon").addEventListener("click", function() {
+  // Marca el icono de WhatsApp como interactuado por el usuario
+  localStorage.setItem("whatsappIconClicked", true);
+  // Oculta el icono después de que el usuario interactúe con él
+  this.classList.remove("show");
 });
