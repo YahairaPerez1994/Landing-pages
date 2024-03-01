@@ -153,8 +153,13 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 52px;
+  /* vertical-align: middle;
+  position: absolute;
+  left: 48px;
+  top: 9px; */
 }
+
 
 /*--------------------------------------------------------------
 #  Get Startet Button
@@ -190,7 +195,15 @@ h6 {
   width: 100%; /* asegura que la imagen llene el contenedor */
   height: auto; /* mantiene la proporción original de la imagen */
 }
-
+@media (max-width: 768px) {
+  .iconwasath img{
+    bottom: 10px; /* Menor distancia desde el fondo para móviles */
+    right: 10px; /* Menor distancia desde la derecha para móviles */
+    width: 60px; /* Aumenta el tamaño para móviles */
+    height: 60px; /* Aumenta el tamaño para móviles */
+    z-index: 5000; /* Asegurándose de que está por encima de la barra de navegación móvil */
+  }
+}
 
 @media (max-width: 992px) {
   .get-started-btn {
