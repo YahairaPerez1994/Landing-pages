@@ -148,13 +148,16 @@
             <img src="https://www.tec.ac.cr/hoyeneltec/sites/default/files/styles/colorbox/public/media/img/main/trabajo-equipo-.jpeg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <div class="section-title">
+              <h2>Nosotros</h2>
             <h3>Somos INNOVATEX.</h3>
+            </div>          
             <p class="fst-italic">
               Somos una empresa especializada en servicios tecnológicos, conformada por un equipo de socios expertos 
               en diversas áreas de la tecnología, apasionados por lo que hacemos y apostamos por el desarrollo continuo
               de nuestro país.
             </p>
-            <p>
+            <p class="fst-italic">
               Nos especializamos en la transformación digital, desde diseño web hasta análisis de datos, con el
               objetivo de impulsar a nuestros clientes hacia el éxito en el mundo digital.
             </p>
@@ -283,20 +286,20 @@
              
               <i class="bx bx-receipt"></i>
               <h4>Desarrollamos Páginas Web y Landing Pages atractivas</h4>
-              <p> Desarrollamos páginas de destino visualmente atractivas y funcionales que capturan la atención de los usuarios y 
+              <p class="fst-italic"> Desarrollamos páginas de destino visualmente atractivas y funcionales que capturan la atención de los usuarios y 
                 los guían hacia la conversión deseada. Utilizamos diseños intuitivos, contenido persuasivo y optimización
                 SEO para maximizar el impacto de cada visita.</p>
             </div>
             <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-cube-alt"></i>
               <h4>Automatizamos procesos </h4>
-              <p> Implementamos soluciones tecnológicas para automatizar tareas y procesos de empresas y emprendimientos, 
+              <p class="fst-italic"> Implementamos soluciones tecnológicas para automatizar tareas y procesos de empresas y emprendimientos, 
                 aumentando la eficiencia operativa y reduciendo errores humanos.</p>
             </div>
             <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-images"></i>
               <h4>Aplicamos ciencia de datos</h4>
-              <p>Utilizamos análisis avanzados y modelos predictivos para extraer conocimientos valiosos de los datos 
+              <p class="fst-italic">Utilizamos análisis avanzados y modelos predictivos para extraer conocimientos valiosos de los datos 
                 empresariales. Desde la segmentación de clientes hasta la predicción de tendencias del mercado, aplicamos
                 técnicas de ciencia de datos para tomar decisiones informadas y estratégicas que impulsen el crecimiento
                 y la innovación.</p>
@@ -317,12 +320,13 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <!-- <h2>Servicios</h2> -->
+          <h2>Servicios</h2>
           <p>Nuestros Servicios</p>
-          <h9>Ofrecemos servicios en todas las etapas de la transformación digital de su organización, 
-            que incluyen lo siguiente:
-          </h9>
         </div>
+        <p class="fst-italic">
+        Ofrecemos servicios en todas las etapas de la transformación digital de su organización, 
+          que incluyen lo siguiente:
+        </p>
 
         <div class="row">
          
@@ -613,8 +617,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Team</h2>
-          <p>Check our Team</p>
+          <h2>Equipo</h2>
+          <p>Conoce a nuestro equipo</p>
         </div>
 
         <div class="row">
@@ -700,8 +704,8 @@
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Contacto</p>
+          <h2>Contacto</h2>
+          <p>Contáctate con nosotros</p>
         </div>
     
         <!-- <div>
@@ -729,7 +733,36 @@
             </div>
           </div>
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form id="contact-form" class="php-email-form">
+            <form id="form">
+              <div class="col-md-6 form-group">
+                <label for="emailjs_name"></label>
+                <input type="text" name="emailjs_name" class="form-control" id="emailjs_name" placeholder="Ingresa tu nombre" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <label for="emailjs_email"></label>
+                <input type="text" name="emailjs_email" class="form-control" id="emailjs_email" placeholder="Ingresa tu correo electrónico" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="emailjs_message"></label>
+                <textarea class="form-control" type="text" name="emailjs_message" id="emailjs_message" placeholder="Ingresa el mensaje" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading" style="display: none;">Cargando</div>
+                <div class="error-message" style="display: none;"></div>
+                <div class="sent-message" style="display: none;">Tu mensaje ha sido enviado. ¡Gracias!</div>
+              </div>
+              <!-- <div class="text-center"><button type="submit" value="Send Email" >Enviar Mensaje</button></div> -->
+              <input class="bottondecontac" type="submit" id="button" value="Enviar Mensaje" >
+            </form>
+            
+            <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            
+            <script type="text/javascript">
+              emailjs.init('9fEq31igl6ix85uBP')
+            </script>
+
+            <!-- <form id="contact-form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
@@ -750,7 +783,7 @@
                 <div class="sent-message" style="display: none;">Tu mensaje ha sido enviado. ¡Gracias!</div>
               </div>
               <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
@@ -803,6 +836,7 @@
             </ul>
           </div>
 
+          
           <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>

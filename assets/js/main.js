@@ -352,3 +352,27 @@ document.getElementById("whatsapp-icon").addEventListener("click", function() {
   // Oculta el icono después de que el usuario interactúe con él
   this.classList.remove("show");
 });
+
+
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_1522z65';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
